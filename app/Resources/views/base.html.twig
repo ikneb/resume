@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8"/>
+    <title>{% block title %}Welcome!{% endblock %}</title>
+    {% block stylesheets %}
+        <link rel="stylesheet" href="{{ asset('css/bootstrap-3.3.6.css') }}"/>
+        <link rel="stylesheet" href="{{ asset('css/main.css') }}"/>
+    {% endblock %}
+    <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}"/>
+</head>
+
+<body>
+<div class="container">
+    {% include 'default/header.html.twig' %}
+    {% block body %}{{ dump(data) }}{% endblock %}
+    {% block javascripts %}
+        <script src="{{ asset('js/jquery-2.2.2.js') }}"></script>
+        <script src="{{ asset('js/bootstrap-3.3.6.js') }}"></script>
+        <script src="{{ asset('js/main.js') }}"></script>
+    {% endblock %}
+</div>
+</body>
+
+</html>

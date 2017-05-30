@@ -1,0 +1,46 @@
+<div class="panel panel-primary">
+    <div class="panel-body">
+        <img src="{{ asset('img/avatar/' ~ user.img ) }}" class="img-responsive" style="width: 100%" />
+        <div class="text">
+            <h1 class="text-canter" >
+                <a style="color: black;" href="/edit">{{ user.name }} {{ user.lastName }}</a>
+            </h1>
+            <p class="account">
+                <strong>{{ user.city }}
+                    {% if user.country and user.city %}, {% endif %}
+                    {{ user.country }}
+                </strong>
+            </p>
+            <p class="account">
+                <strong>Age:</strong> {{ age }},<strong> Birthday: </strong>{{ user.birthDay|date('Y-m-d') }}
+            </p>
+        </div>
+    </div>
+    <div class="list-group contacts">
+        {% if user.phone %}
+            <a class="list-group-item" href="{{ user.phone }}"><i class="fa fa-phone" aria-hidden="true"></i> {{ user.phone }}</a>
+        {% endif %}
+        {% if user.email %}
+            <a class="list-group-item" href="mailto:{{ user.email }}"><i class="fa fa-envelope" aria-hidden="true"></i> {{ user.email }}</a>
+        {%  endif %}
+        {% if contact.skype %}
+            <a class="list-group-item" href="javascript:void(0);"><i class="fa fa-skype" aria-hidden="true"></i> {{ contact.skype }}</a>
+        {% endif %}
+        {% if contact.vc %}
+            <a target="_blank" class="list-group-item" href="{{ contact.vc }}"> <i class="fa fa-vk" aria-hidden="true"></i> {{ contact.vc }}</a>
+        {% endif %}
+        {% if contact.facebook %}
+            <a target="_blank" class="list-group-item" href="{{ contact.facebook }}"><i class="fa fa-facebook" aria-hidden="true"></i> {{ contact.facebook }}</a>
+        {% endif %}
+        {% if contact.linkedin %}
+            <a target="_blank" class="list-group-item" href="{{ contact.linkedin }}"><i class="fa fa-linkedin" aria-hidden="true"></i> {{ contact.linkedin }}</a>
+        {% endif %}
+        {% if contact.github %}
+            <a target="_blank" class="list-group-item" href="{{ contact.github }}"><i class="fa fa-github" aria-hidden="true"></i> {{ contact.github }}</a>
+        {% endif %}
+        {% if contact.stackowerflow %}
+            <a target="_blank" class="list-group-item" href="{{ contact.stackowerflow }}"><i class="fa fa-stack-overflow" aria-hidden="true"></i> {{ contact.stackowerflow }}</a>
+        {% endif %}
+
+    </div>
+</div>

@@ -1,0 +1,15 @@
+
+body {
+    background-color: #adadad;
+}
+.container {
+
+}
+/*home page*/
+
+.logo-large {
+    width: 100%;
+}
+.photo {
+    max-height: 140px;
+}

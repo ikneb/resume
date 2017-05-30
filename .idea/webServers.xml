@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="3137aadf-784c-4a98-a334-7e829e4948eb" name="weeteam" url="http://148.251.133.211">
+        <fileTransfer host="148.251.133.211" port="65321" rootFolder="/var/www/weeteam.d/nasos.weeteam.net" accessType="SFTP" username="root">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" />
+          </advancedOptions>
+          <option name="port" value="65321" />
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>

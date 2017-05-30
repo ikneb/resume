@@ -1,0 +1,30 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    {{ parent() }}
+
+        <div class="row">
+            <div class="col-lg-4  col-sm-6">
+                {% include 'account/account-section/account-main.html.twig' %}
+                <div class="hidden-xs">
+                    {% include 'account/account-section/account-languages.html.twig' %}
+                    {% include 'account/account-section/account-hobbies.html.twig' %}
+                    {% include 'account/account-section/account-info.html.twig' %}
+                </div>
+            </div>
+            <div class="col-lg-8 col-sm-6">
+                {% include 'account/account-section/account-objective.html.twig' %}
+                {% include 'account/account-section/account-skills.html.twig' %}
+                {% include 'account/account-section/account-practic.html.twig' %}
+                {% include 'account/account-section/account-certificates.html.twig' %}
+                {% include 'account/account-section/account-cources.html.twig' %}
+                {% include 'account/account-section/account-education.html.twig' %}
+            </div>
+            <div class="col-xs-12 visible-xs-block">
+                {% include 'account/account-section/account-languages.html.twig' %}
+                {% include 'account/account-section/account-hobbies.html.twig' %}
+                {% include 'account/account-section/account-info.html.twig' %}
+            </div>
+        </div>
+
+{% endblock %}

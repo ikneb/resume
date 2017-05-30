@@ -1,0 +1,24 @@
+{% for  user in users %}
+    <div class="panel panel-default account-item">
+        <div class="media panel-body">
+            <div class="media-left media-top">
+                <a href="/account/{{ user.id }}"><img alt="" src="{{ asset('img/avatar/' ~ user.img ) }}" class="photo"></a>
+            </div>
+            <div class="media-body search-result-item">
+                <a href="/account/{{ user.id }}" class="btn btn-primary pull-right">Детали</a>
+                <h4 class="media-heading">
+                    <a href="">{{ user.name }}</a>
+                </h4>
+                <strong>{{ user.position }}</strong>
+                <p>
+                    {{ user.city }}
+                    {% if user.country and user.city %}, {% endif %}
+                    {{ user.country }}
+                </p>
+                <blockquote>
+                    <small>{{ user.objective }}</small>
+                </blockquote>
+            </div>
+        </div>
+    </div>
+{% endfor %}
